@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Kriano Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/Kriano_Logo.png" alt="Kriano Technologies" class="logo-icon">
+                    <div class="logo-text">
+                        <span class="company-name">Kriano</span>
+                        <span class="company-type">Technologies</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">Get In <span class="highlight">Touch</span></h1>
+                    <p class="page-subtitle">Ready to start your data transformation journey? Let's connect and explore the possibilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-detailed">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-intro">
+                            <h2>Let's Transform Your Business Together</h2>
+                            <p>Whether you're looking to harness the power of data analytics, implement AI solutions, or build autonomous systems, our team is here to guide you through every step of your transformation journey.</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email Us</h4>
+                                    <p>info@krianotechnologies.com</p>
+                                    <p>We typically respond within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Call Us</h4>
+                                    <p>+91 11 4567-8900</p>
+                                    <p>Monday - Friday, 9 AM - 6 PM IST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Visit Us</h4>
+                                    <p>New Delhi, India<br>Enterprise Hub, Connaught Place</p>
+                                    <p>Schedule an appointment for in-person meetings</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Schedule a Consultation</h4>
+                                    <p>Book a free 30-minute consultation</p>
+                                    <p>Discuss your challenges and explore solutions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="response-time">
+                            <div class="response-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Quick Response</h4>
+                                    <p>We respond to all inquiries within 24 hours</p>
+                                </div>
+                            </div>
+                            <div class="response-item">
+                                <i class="fas fa-handshake"></i>
+                                <div>
+                                    <h4>Free Consultation</h4>
+                                    <p>Initial discussion is always complimentary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-section">
+                        <div class="contact-form-container">
+                            <h3>Send Us a Message</h3>
+                            <p>Tell us about your project and we'll get back to you with insights and recommendations.</p>
+                            
+                            <form id="contactForm" class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company">Company Name</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="industry">Industry</label>
+                                    <select id="industry" name="industry">
+                                        <option value="">Select your industry</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="financial">Financial Services</option>
+                                        <option value="retail">Retail & E-commerce</option>
+                                        <option value="manufacturing">Manufacturing</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="education">Education</option>
+                                        <option value="energy">Energy & Utilities</option>
+                                        <option value="transportation">Transportation & Logistics</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="services">Services of Interest</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="services" value="data-analytics">
+                                            <span class="checkmark"></span>
+                                            Data Analytics
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="services" value="ai-solutions">
+                                            <span class="checkmark"></span>
+                                            AI Solutions
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="services" value="agentic-ai">
+                                            <span class="checkmark"></span>
+                                            Agentic AI
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="services" value="data-engineering">
+                                            <span class="checkmark"></span>
+                                            Data Engineering
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="services" value="consulting">
+                                            <span class="checkmark"></span>
+                                            Consulting & Training
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="budget">Project Budget Range</label>
+                                    <select id="budget" name="budget">
+                                        <option value="">Select budget range</option>
+                                        <option value="under-50k">Under $50,000</option>
+                                        <option value="50k-100k">$50,000 - $100,000</option>
+                                        <option value="100k-250k">$100,000 - $250,000</option>
+                                        <option value="250k-500k">$250,000 - $500,000</option>
+                                        <option value="over-500k">Over $500,000</option>
+                                        <option value="discuss">Let's discuss</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="timeline">Project Timeline</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">Select timeline</option>
+                                        <option value="asap">ASAP</option>
+                                        <option value="1-3-months">1-3 months</option>
+                                        <option value="3-6-months">3-6 months</option>
+                                        <option value="6-12-months">6-12 months</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Project Description *</label>
+                                    <textarea id="message" name="message" rows="6" placeholder="Tell us about your project, challenges, and goals..." required></textarea>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="newsletter" value="yes">
+                                        <span class="checkmark"></span>
+                                        Subscribe to our newsletter for insights and updates
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Common questions about our services and process</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>What makes Kriano Technologies different?</h4>
+                        <p>We combine deep technical expertise with a holistic understanding of business challenges. Our approach transforms chaos into intelligent clarity, delivering not just solutions but strategic advantages.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How long does a typical project take?</h4>
+                        <p>Project timelines vary based on complexity and scope. Simple analytics projects can be completed in 4-8 weeks, while comprehensive AI implementations may take 3-6 months. We always provide detailed timelines during our initial consultation.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you work with small businesses?</h4>
+                        <p>Absolutely! We believe in democratizing advanced analytics and AI. We offer scalable solutions and flexible engagement models to work with businesses of all sizes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What industries do you serve?</h4>
+                        <p>We serve multiple industries including healthcare, financial services, retail, manufacturing, technology, and education. We're also expanding into new verticals like energy, transportation, and more.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you provide ongoing support?</h4>
+                        <p>Yes, we offer comprehensive support packages including maintenance, updates, training, and optimization services to ensure long-term success of your solutions.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can you work with our existing data infrastructure?</h4>
+                        <p>We're experienced in working with diverse data environments and can integrate with your existing infrastructure. We also provide recommendations for optimization and modernization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-steps">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Happens Next?</h2>
+                    <p class="section-subtitle">Our streamlined process for getting started</p>
+                </div>
+                <div class="steps-timeline">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Initial Consultation</h4>
+                            <p>We discuss your challenges, goals, and current data landscape in a free 30-minute consultation.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Assessment & Proposal</h4>
+                            <p>We analyze your requirements and provide a detailed proposal with timeline, approach, and investment.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Project Kickoff</h4>
+                            <p>Once approved, we begin with discovery workshops and detailed project planning.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Delivery & Success</h4>
+                            <p>We deliver your solution with training, documentation, and ongoing support for maximum impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-brand">
+                        <img src="images/Kriano_Logo.png" alt="Kriano Technologies" class="logo-icon">
+                        <div class="logo-text">
+                            <span class="company-name">Kriano</span>
+                            <span class="company-type">Technologies</span>
+                        </div>
+                    </div>
+                    <p>Transforming businesses through data intelligence and AI innovation.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Data Analytics</a></li>
+                            <li><a href="services.html">AI Solutions</a></li>
+                            <li><a href="services.html">Agentic AI</a></li>
+                            <li><a href="services.html">Data Engineering</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kriano Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
