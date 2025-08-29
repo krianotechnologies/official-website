@@ -1,3 +1,15 @@
+// Immediate loader hide function - runs before DOM is ready
+setTimeout(() => {
+    const loader = document.querySelector('.loader');
+    if (loader) {
+        loader.style.transition = 'opacity 0.5s ease';
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }
+}, 2000);
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
@@ -49,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Intersection Observer for animations
+    // Enhanced intersection observer for modern animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -60,20 +72,55 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-in');
             }
         });
     }, observerOptions);
 
     // Observe elements for scroll animations
     const animatedElements = document.querySelectorAll(
-        '.service-card, .solution-card, .stat, .about-text, .contact-item'
+        '.service-card, .solution-card, .stat, .about-text, .contact-item, .testimonial-card, .hero-stat'
     );
     
-    animatedElements.forEach(el => {
+    animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(el);
+    });
+
+    // Add modern hover effects to service cards
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = card.classList.contains('featured') 
+                ? 'scale(1.02) translateY(-12px)' 
+                : 'translateY(-12px)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = card.classList.contains('featured') 
+                ? 'scale(1.02)' 
+                : 'translateY(0)';
+        });
+    });
+
+    // Dashboard preview interactions
+    const dashboardNav = document.querySelectorAll('.nav-item');
+    dashboardNav.forEach(item => {
+        item.addEventListener('click', () => {
+            dashboardNav.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+            
+            // Add visual feedback
+            const dashboardContent = document.querySelector('.dashboard-content');
+            if (dashboardContent) {
+                dashboardContent.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    dashboardContent.style.transform = 'scale(1)';
+                }, 100);
+            }
+        });
     });
 
     // Counter animation for stats
@@ -279,19 +326,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }
 
-    // Add loading animation
-    window.addEventListener('load', () => {
-        const loader = document.querySelector('.loader');
-        if (loader) {
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 300);
-        }
-        
-        // Trigger initial animations
-        document.body.classList.add('loaded');
-    });
+    // Trigger loaded class for animations
+    document.body.classList.add('loaded');
 
     // Performance optimization: throttle scroll events
     let ticking = false;
