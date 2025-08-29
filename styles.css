@@ -406,7 +406,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
@@ -487,7 +487,7 @@ body {
 
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -757,6 +757,35 @@ body {
   .stats {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .hero {
+    padding: 110px 20px 50px;
+    min-height: 85vh;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .services {
+    padding: 80px 0;
+  }
+
+  .solutions {
+    padding: 80px 0;
+  }
+
+  .contact {
+    padding: 80px 0;
+  }
+
+  .service-card {
+    padding: 2rem;
+  }
+
+  .solution-card {
+    padding: 1.75rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -770,7 +799,7 @@ body {
     text-align: center;
     transition: 0.3s;
     box-shadow: var(--shadow-light);
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
 
   .nav-menu.active {
@@ -793,25 +822,140 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .hero {
+    padding: 100px 20px 40px;
+    min-height: 80vh;
+  }
+
+  .hero-content {
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about {
+    padding: 60px 0;
+  }
+
+  .services {
+    padding: 60px 0;
+  }
+
+  .solutions {
+    padding: 60px 0;
+  }
+
+  .contact {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
   }
   
   .solutions-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .solution-card {
+    padding: 1.5rem;
   }
   
+  .footer {
+    padding: 40px 0 15px;
+  }
+
   .footer-links {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   .stats {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
   }
-  
-  .hero-buttons {
-    justify-content: center;
+
+  .stat {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-visual {
+    height: 250px;
+  }
+
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .cta {
+    padding: 50px 0;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1444,20 +1588,233 @@ body {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 15px;
+    padding: 0 12px;
   }
   
   .nav-container {
-    padding: 0 15px;
+    padding: 0 12px;
+    height: 70px;
   }
   
   .hero {
-    padding: 100px 15px 60px;
+    padding: 85px 12px 30px;
+    min-height: 70vh;
   }
-  
+
+  .hero-content {
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+    min-width: 160px;
+  }
+
+  .about {
+    padding: 40px 0;
+  }
+
+  .services {
+    padding: 40px 0;
+  }
+
+  .solutions {
+    padding: 40px 0;
+  }
+
+  .contact {
+    padding: 40px 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
   .service-card,
   .contact-form {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card li {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .solution-card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .solution-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .solution-card p {
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat {
+    padding: 0.75rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .hero-visual {
+    height: 200px;
+  }
+
+  .image-placeholder {
+    width: 150px;
+    height: 150px;
+    font-size: 2.5rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .contact-details h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-details p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .cta {
+    padding: 35px 0;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer {
+    padding: 30px 0 12px;
+  }
+
+  .footer-content {
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-brand .logo-icon {
+    height: 35px;
+  }
+
+  .footer-brand .company-name {
+    font-size: 1.1rem;
+  }
+
+  .footer-logo p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .footer-section h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-section li {
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-section a {
+    font-size: 0.85rem;
   }
   
   .nav-logo {
@@ -1475,12 +1832,131 @@ body {
   .company-type {
     font-size: 0.65rem;
   }
-  
-  .footer-brand .logo-icon {
-    height: 40px;
+}
+
+/* Extra small mobile devices */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 10px;
   }
   
-  .footer-brand .company-name {
+  .nav-container {
+    padding: 0 10px;
+    height: 65px;
+  }
+
+  .hero {
+    padding: 80px 10px 25px;
+    min-height: 65vh;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 9vw, 1.9rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    min-width: 140px;
+  }
+
+  .about,
+  .services,
+  .solutions,
+  .contact {
+    padding: 30px 0;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.2rem, 7vw, 1.6rem);
+    margin-bottom: 0.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .service-card,
+  .solution-card {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-icon,
+  .solution-icon {
+    width: 45px;
+    height: 45px;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3,
+  .solution-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card p,
+  .solution-card p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card li {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .cta {
+    padding: 25px 0;
+  }
+
+  .footer {
+    padding: 25px 0 10px;
+  }
+
+  .logo-icon {
+    height: 40px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .stats {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .stat {
+    padding: 0.6rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
   }
 }
