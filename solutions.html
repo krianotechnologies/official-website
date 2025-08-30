@@ -26,7 +26,7 @@
                     <li><a href="solutions.html" class="nav-link active">Solutions</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="hamburger">
+                <div class="hamburger" onclick="toggleMobileMenu()">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -366,6 +366,38 @@
         </div>
     </footer>
 
+    <script>
+        // Inline hamburger function to ensure it's always available
+        function toggleMobileMenu() {
+            console.log('=== TOGGLE MOBILE MENU CALLED ===');
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            console.log('Hamburger element:', hamburger);
+            console.log('NavMenu element:', navMenu);
+            
+            if (hamburger && navMenu) {
+                const isActive = hamburger.classList.contains('active');
+                console.log('Current state - isActive:', isActive);
+                
+                if (isActive) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    console.log('REMOVED active classes');
+                } else {
+                    hamburger.classList.add('active');
+                    navMenu.classList.add('active');
+                    console.log('ADDED active classes');
+                }
+                
+                console.log('Final hamburger classes:', hamburger.className);
+                console.log('Final nav menu classes:', navMenu.className);
+            } else {
+                console.error('ELEMENTS NOT FOUND!');
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

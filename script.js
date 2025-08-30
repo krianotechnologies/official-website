@@ -1,3 +1,39 @@
+// Ultra simple global function for onclick - MUST be at the top
+function toggleMobileMenu() {
+    console.log('=== TOGGLE MOBILE MENU CALLED ===');
+    
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    console.log('Hamburger element:', hamburger);
+    console.log('NavMenu element:', navMenu);
+    
+    if (hamburger && navMenu) {
+        // Check current state
+        const isActive = hamburger.classList.contains('active');
+        console.log('Current state - isActive:', isActive);
+        
+        // Toggle classes
+        if (isActive) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            console.log('REMOVED active classes');
+        } else {
+            hamburger.classList.add('active');
+            navMenu.classList.add('active');
+            console.log('ADDED active classes');
+        }
+        
+        // Verify final state
+        console.log('Final hamburger classes:', hamburger.className);
+        console.log('Final nav menu classes:', navMenu.className);
+    } else {
+        console.error('ELEMENTS NOT FOUND!');
+        console.error('All hamburgers:', document.querySelectorAll('.hamburger'));
+        console.error('All nav-menus:', document.querySelectorAll('.nav-menu'));
+    }
+}
+
 // Immediate loader hide function - runs before DOM is ready
 setTimeout(() => {
     const loader = document.querySelector('.loader');
@@ -11,20 +47,23 @@ setTimeout(() => {
 }, 2000);
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
+    console.log('DOM loaded - setting up hamburger');
+    
+    // Test if elements exist
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    console.log('DOM Ready - Hamburger:', hamburger);
+    console.log('DOM Ready - NavMenu:', navMenu);
     
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
     // Close mobile menu when clicking on a nav link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         });
     });
 
@@ -274,8 +313,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Service card tilt effect
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
+    const serviceCardsForTilt = document.querySelectorAll('.service-card');
+    serviceCardsForTilt.forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;

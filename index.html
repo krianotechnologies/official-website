@@ -36,7 +36,7 @@
                     <li><a href="solutions.html" class="nav-link">Solutions</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="hamburger">
+                <div class="hamburger" onclick="toggleMobileMenu()">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-image">
-                        <img src="images/hero-dashboard.png" alt="AI Analytics Dashboard" class="dashboard-image">
+                        <img src="images/hero_image.png" alt="AI Analytics Dashboard" class="dashboard-image">
                     </div>
                 </div>
             </div>
@@ -166,202 +166,140 @@
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section class="why-choose-us">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">About Kriano Technologies</h2>
-                    <p class="section-subtitle">Pioneering the intersection of data science, analytics, and artificial intelligence</p>
+                    <h2 class="section-title">Why Choose Kriano Technologies?</h2>
+                    <p class="section-subtitle">We bridge the gap between raw data and transformative business insights</p>
                 </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>At Kriano Technologies, we envision a future where every business decision is powered by intelligence, every process is optimized by innovation, and every challenge becomes an opportunity for growth.</p>
-                        <p>Founded by passionate entrepreneurs, we bridge the gap between raw data and transformative insights. Our mission is to democratize advanced analytics and AI, making cutting-edge technology accessible to businesses of all sizes across diverse industries.</p>
-                        <div class="stats">
-                            <div class="stat">
-                                <div class="stat-number">100+</div>
-                                <div class="stat-label">Projects Delivered</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">50+</div>
-                                <div class="stat-label">Happy Clients</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">5+</div>
-                                <div class="stat-label">Industry Verticals</div>
-                            </div>
+                <div class="differentiators">
+                    <div class="differentiator">
+                        <div class="diff-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>90-Day ROI Guarantee</h4>
+                        <p>See measurable results within 90 days or we'll work for free until you do.</p>
+                    </div>
+                    <div class="differentiator">
+                        <div class="diff-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Enterprise-Grade Security</h4>
+                        <p>SOC2 compliant with zero data breaches in our company history.</p>
+                    </div>
+                    <div class="differentiator">
+                        <div class="diff-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Proven Track Record</h4>
+                        <p>100+ successful projects across 50+ clients in 5+ industry verticals.</p>
+                    </div>
+                </div>
+                <div class="about-cta">
+                    <a href="about.html" class="btn btn-outline">
+                        <span>Learn More About Us</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What We Do</h2>
+                    <p class="section-subtitle">Three core capabilities that transform your business through AI and data intelligence</p>
+                </div>
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <div class="capability-image">
+                            <img src="images/AI_Powered_Analytics.png" alt="AI & Analytics Solutions" class="capability-img">
+                        </div>
+                        <h3>AI & Analytics Solutions</h3>
+                        <p>Transform data into intelligent insights with custom AI models, predictive analytics, and automated decision-making systems.</p>
+                        <div class="capability-stats">
+                            <span>40% avg revenue boost</span>
                         </div>
                     </div>
-                    <div class="about-image">
-                        <div class="image-placeholder">
+                    <div class="capability-card">
+                        <div class="capability-image">
+                            <img src="images/Data_Engineering.png" alt="Data Engineering & Governance" class="capability-img">
+                        </div>
+                        <h3>Data Engineering & Governance</h3>
+                        <p>Build robust, scalable data infrastructure with enterprise-grade security, compliance, and real-time processing capabilities.</p>
+                        <div class="capability-stats">
+                            <span>99.9% uptime guaranteed</span>
+                        </div>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-image">
+                            <img src="images/training.png" alt="Strategic AI Consulting" class="capability-img">
+                        </div>
+                        <h3>Strategic AI Consulting</h3>
+                        <p>Get expert guidance to develop AI strategies, train your teams, and implement solutions that deliver measurable ROI.</p>
+                        <div class="capability-stats">
+                            <span>90-day ROI guarantee</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-cta">
+                    <a href="services.html" class="btn btn-primary">
+                        <span>Explore All Services</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="industries-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Industries We Serve</h2>
+                    <p class="section-subtitle">Trusted by leading companies across multiple sectors</p>
+                </div>
+                <div class="industries-logos">
+                    <div class="industry-logo">
+                        <div class="industry-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <span>Healthcare</span>
+                    </div>
+                    <div class="industry-logo">
+                        <div class="industry-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
+                        <span>Financial Services</span>
+                    </div>
+                    <div class="industry-logo">
+                        <div class="industry-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span>Retail & E-commerce</span>
+                    </div>
+                    <div class="industry-logo">
+                        <div class="industry-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <span>Manufacturing</span>
+                    </div>
+                    <div class="industry-logo">
+                        <div class="industry-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <span>Technology</span>
+                    </div>
+                    <div class="industry-logo">
+                        <div class="industry-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <span>More Industries</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Accelerate Your Growth with AI</h2>
-                    <p class="section-subtitle">Enterprise-grade solutions that deliver measurable ROI within 90 days</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-image">
-                            <div class="image-placeholder">Analytics Image</div>
-                        </div>
-                        <h3>AI-Powered Analytics</h3>
-                        <p>Stop guessing, start knowing. Our AI finds hidden patterns that boost revenue by 40% on average.</p>
-                        <div class="service-metrics">
-                            <div class="metric">40% avg revenue boost</div>
-                            <div class="metric">3x faster insights</div>
-                        </div>
-                        <ul>
-                            <li>Predictive Revenue Models</li>
-                            <li>Real-time Dashboards</li>
-                            <li>Automated Insights</li>
-                            <li>ROI Tracking</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-image">
-                            <div class="image-placeholder">AI Solutions Image</div>
-                        </div>
-                        <h3>Custom AI Solutions</h3>
-                        <p>Build AI that thinks like your best employee but works 24/7. Automate complex decisions and scale your expertise.</p>
-                        <div class="service-metrics">
-                            <div class="metric">90% time saved</div>
-                            <div class="metric">99.9% accuracy</div>
-                        </div>
-                        <ul>
-                            <li>Custom AI Models</li>
-                            <li>Process Automation</li>
-                            <li>Intelligent Workflows</li>
-                            <li>24/7 AI Assistants</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-image">
-                            <div class="image-placeholder">Agentic AI Image</div>
-                        </div>
-                        <h3>Agentic AI</h3>
-                        <p>Deploy AI agents that work independently to solve problems, make decisions, and execute tasks without human intervention.</p>
-                        <div class="service-metrics">
-                            <div class="metric">24/7 operation</div>
-                            <div class="metric">Zero errors</div>
-                        </div>
-                        <ul>
-                            <li>Autonomous Decision Making</li>
-                            <li>Multi-Agent Systems</li>
-                            <li>Self-Learning Algorithms</li>
-                            <li>Enterprise Integration</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-image">
-                            <div class="image-placeholder">Data Engineering Image</div>
-                        </div>
-                        <h3>Data Engineering</h3>
-                        <p>Transform messy data chaos into clean, organized intelligence. Get your data AI-ready in weeks, not months.</p>
-                        <div class="service-metrics">
-                            <div class="metric">10x faster processing</div>
-                            <div class="metric">99.9% uptime</div>
-                        </div>
-                        <ul>
-                            <li>Real-time Data Pipelines</li>
-                            <li>Cloud-Native Architecture</li>
-                            <li>Auto-scaling Infrastructure</li>
-                            <li>Data Quality Monitoring</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-image">
-                            <div class="image-placeholder">Data Governance Image</div>
-                        </div>
-                        <h3>Data Governance</h3>
-                        <p>Sleep peacefully knowing your data is secure, compliant, and audit-ready. Protect your business from costly data breaches.</p>
-                        <div class="service-metrics">
-                            <div class="metric">Zero breaches</div>
-                            <div class="metric">100% compliance</div>
-                        </div>
-                        <ul>
-                            <li>Enterprise Security</li>
-                            <li>GDPR/SOC2 Compliance</li>
-                            <li>Automated Auditing</li>
-                            <li>Data Loss Prevention</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-image">
-                            <div class="image-placeholder">Training Image</div>
-                        </div>
-                        <h3>AI Strategy & Training</h3>
-                        <p>Transform your team into AI powerhouses. Get expert guidance to implement AI strategies that deliver results from day one.</p>
-                        <div class="service-metrics">
-                            <div class="metric">500% productivity</div>
-                            <div class="metric">30-day results</div>
-                        </div>
-                        <ul>
-                            <li>AI Strategy Roadmap</li>
-                            <li>Executive Training</li>
-                            <li>Implementation Support</li>
-                            <li>Change Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="solutions" class="solutions">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Industry Solutions</h2>
-                    <p class="section-subtitle">Specialized solutions across multiple industry verticals</p>
-                </div>
-                <div class="solutions-grid">
-                    <div class="solution-card">
-                        <div class="solution-image">
-                            <div class="image-placeholder">Healthcare Image</div>
-                        </div>
-                        <h3>Healthcare</h3>
-                        <p>Advanced analytics for patient outcomes, operational efficiency, and clinical decision support.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="solution-image">
-                            <div class="image-placeholder">Financial Services Image</div>
-                        </div>
-                        <h3>Financial Services</h3>
-                        <p>Risk management, fraud detection, and algorithmic trading solutions powered by AI.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="solution-image">
-                            <div class="image-placeholder">Retail & E-commerce Image</div>
-                        </div>
-                        <h3>Retail & E-commerce</h3>
-                        <p>Customer analytics, demand forecasting, and personalization engines.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="solution-image">
-                            <div class="image-placeholder">Manufacturing Image</div>
-                        </div>
-                        <h3>Manufacturing</h3>
-                        <p>Predictive maintenance, quality control, and supply chain optimization.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="solution-image">
-                            <div class="image-placeholder">Technology Image</div>
-                        </div>
-                        <h3>Technology</h3>
-                        <p>Performance analytics, user behavior insights, and AI-driven product features.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="solution-image">
-                            <div class="image-placeholder">More Industries Image</div>
-                        </div>
-                        <h3>More Industries</h3>
-                        <p>Expanding our expertise to serve diverse sectors with tailored solutions.</p>
-                    </div>
+                <div class="solutions-cta">
+                    <a href="solutions.html" class="btn btn-secondary">
+                        <span>View Industry Solutions</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -381,62 +319,6 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Ready to start your data transformation journey? Contact us today.</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email Us</h4>
-                                <p>info@krianotechnologies.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Call Us</h4>
-                                <p>+91 11 4567-8900</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Visit Us</h4>
-                                <p>New Delhi, India<br>Enterprise Hub, Connaught Place</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -487,6 +369,38 @@
         </div>
     </footer>
 
+    <script>
+        // Inline hamburger function to ensure it's always available
+        function toggleMobileMenu() {
+            console.log('=== TOGGLE MOBILE MENU CALLED ===');
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            console.log('Hamburger element:', hamburger);
+            console.log('NavMenu element:', navMenu);
+            
+            if (hamburger && navMenu) {
+                const isActive = hamburger.classList.contains('active');
+                console.log('Current state - isActive:', isActive);
+                
+                if (isActive) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    console.log('REMOVED active classes');
+                } else {
+                    hamburger.classList.add('active');
+                    navMenu.classList.add('active');
+                    console.log('ADDED active classes');
+                }
+                
+                console.log('Final hamburger classes:', hamburger.className);
+                console.log('Final nav menu classes:', navMenu.className);
+            } else {
+                console.error('ELEMENTS NOT FOUND!');
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
