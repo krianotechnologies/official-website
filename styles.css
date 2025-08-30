@@ -613,9 +613,7 @@ body {
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: var(--shadow-light);
-  transition: var(--transition);
   position: relative;
-  overflow: hidden;
 }
 
 .service-image {
@@ -630,11 +628,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
-}
-
-.service-card:hover .service-image img {
-  transform: scale(1.05);
 }
 
 .service-card::before {
@@ -645,11 +638,6 @@ body {
   right: 0;
   height: 4px;
   background: var(--gradient-primary);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-medium);
 }
 
 .service-icon {
@@ -1072,5 +1060,432 @@ body {
   
   .footer-brand .company-name {
     font-size: 1.2rem;
+  }
+}
+
+/* About Page Specific Styles */
+
+/* Company Story Section */
+.company-story {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.story-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.story-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.story-text {
+  margin-bottom: 3rem;
+}
+
+.story-text p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.founder-quote {
+  background: linear-gradient(135deg, var(--background-gray) 0%, #f0f8ff 100%);
+  border: 2px solid var(--primary-color);
+  padding: 2.5rem;
+  margin: 3rem auto;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 188, 212, 0.15);
+  position: relative;
+  max-width: 700px;
+}
+
+.founder-quote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Vision & Mission Section */
+.vision-mission {
+  padding: 80px 0;
+  background: var(--background-gray);
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vision-card, .mission-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card::before, .mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--gradient-primary);
+}
+
+.vision-card:hover, .mission-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 80px rgba(0, 188, 212, 0.25);
+}
+
+.card-icon {
+  width: 90px;
+  height: 90px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+  transition: all 0.3s ease;
+}
+
+.card-icon i {
+  font-size: 2.2rem;
+  color: white;
+}
+
+.vision-card:hover .card-icon, .mission-card:hover .card-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.vision-card h3, .mission-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.vision-card h4, .mission-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.vision-card p, .mission-card p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Core Values Section */
+.core-values {
+  padding: 100px 0;
+  background: var(--background-light);
+}
+
+.core-values .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.core-values .section-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.core-values .section-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Flashcard-style Value Items */
+.value-item {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 188, 212, 0.2);
+}
+
+.value-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* Cyan Blue Encircled Icons */
+.value-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.value-icon::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.value-item:hover .value-icon::before {
+  opacity: 0.3;
+}
+
+.value-icon i {
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover .value-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(0, 188, 212, 0.4);
+}
+
+.value-item:hover .value-icon i {
+  transform: scale(1.1);
+}
+
+.value-item h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.value-item:hover h4 {
+  color: var(--primary-color);
+}
+
+.value-item p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.value-item:hover p {
+  color: var(--text-primary);
+}
+
+/* Team Section */
+.team-section {
+  padding: 100px 0;
+  background: var(--background-gray);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.member-photo {
+  margin-bottom: 1.5rem;
+}
+
+.member-photo i {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.member-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.member-info h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.member-info p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.member-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: var(--background-gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .story-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  .core-values .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .company-story {
+    padding: 60px 0;
+  }
+  
+  .vision-mission {
+    padding: 60px 0;
+  }
+  
+  .core-values {
+    padding: 60px 0;
+  }
+  
+  .vision-card, .mission-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .story-text p {
+    font-size: 1.1rem;
+  }
+  
+  .founder-quote {
+    padding: 2rem;
+    font-size: 1.1rem;
   }
 }
