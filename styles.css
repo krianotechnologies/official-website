@@ -294,6 +294,10 @@ body.loaded {
   letter-spacing: -0.03em;
 }
 
+.hero-title-large {
+  font-size: clamp(3.2rem, 6.5vw, 5.5rem);
+}
+
 .highlight {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
