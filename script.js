@@ -34,17 +34,20 @@ function toggleMobileMenu() {
     }
 }
 
-// Immediate loader hide function - runs before DOM is ready
-setTimeout(() => {
+// Enhanced loader functionality
+window.addEventListener('load', () => {
     const loader = document.querySelector('.loader');
     if (loader) {
-        loader.style.transition = 'opacity 0.5s ease';
-        loader.style.opacity = '0';
+        // Add a minimum loading time for smooth experience
         setTimeout(() => {
-            loader.style.display = 'none';
-        }, 500);
+            loader.classList.add('hidden');
+            // Remove from DOM after transition
+            setTimeout(() => {
+                loader.remove();
+            }, 500);
+        }, 4000);
     }
-}, 2000);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded - setting up hamburger');
